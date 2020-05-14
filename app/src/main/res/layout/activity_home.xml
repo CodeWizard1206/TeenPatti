@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_background"
+    tools:context=".HomeActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/profileCard"
+        android:layout_width="220dp"
+        android:layout_margin="5dp"
+        android:layout_height="44dp"
+        app:cardCornerRadius="5dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/profile_card"
+            android:scaleType="fitXY"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="3dp" >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/guestProfile"
+                android:layout_width="36dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/user_profile"
+                android:layout_centerVertical="true"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="3dp"
+                android:layout_toEndOf="@id/guestProfile"
+                android:fontFamily="@font/game_font_regular"
+                app:fontFamily="@font/game_font_regular"
+                android:textColor="@color/txtColorOne"
+                android:textSize="20sp"
+                android:singleLine="true"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_height="44dp"
+        app:cardCornerRadius="5dp"
+        android:layout_toEndOf="@id/profileCard">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/chip_card_bk"
+            android:scaleType="fitXY"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="3dp">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/chipImg"
+                android:layout_width="38dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/chips_img"
+                android:layout_centerVertical="true"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/chipAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/chipImg"
+                android:layout_marginHorizontal="5dp"
+                android:fontFamily="@font/game_font_regular"
+                android:inputType="numberSigned"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textColor="@color/txtColorOne"
+                android:textSize="22sp"
+                app:fontFamily="@font/game_font_regular"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/adminCard"
+        android:layout_width="120dp"
+        android:layout_margin="5dp"
+        android:layout_height="44dp"
+        app:cardCornerRadius="5dp"
+        android:layout_toStartOf="@id/buyChipCard"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/admin_card"
+            android:scaleType="fitXY"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="3dp">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/adminImg"
+                android:layout_width="38dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/admin_profile"
+                android:layout_centerVertical="true"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/adminImg"
+                android:fontFamily="@font/game_font_regular"
+                app:fontFamily="@font/game_font_regular"
+                android:textColor="@color/txtColorOne"
+                android:textSize="28sp"
+                android:text="@string/admin"
+                android:textAlignment="center"
+                android:singleLine="true"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/buyChipCard"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_alignParentEnd="true"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="5dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/buy_chip_btn"
+            android:scaleType="fitXY"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/buyTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buy"
+                android:textColor="@color/txtColorOne"
+                android:fontFamily="@font/game_font_regular"
+                android:textSize="22sp"
+                android:layout_marginHorizontal="3dp"
+                android:layout_centerVertical="true"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/chipIcon"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chips_img"
+                android:layout_toEndOf="@+id/buyTxt"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/chipIcon"
+                android:layout_alignEnd="@id/chipIcon"
+                android:src="@drawable/dollar"
+                android:rotation="60"/>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/exitCard"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="8dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/log_out_button_bk"
+            android:scaleType="fitXY"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/logOutLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logout_icon"
+                android:rotation="180"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/logOutTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/logOutLogo"
+                android:text="@string/logout"
+                android:textColor="@color/txtColorOne"
+                android:fontFamily="@font/game_font_regular"
+                android:textSize="18sp"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/gameButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/noLimitPlay"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/teenPatti"
+                android:textSize="40sp"
+                android:textColor="@color/txtColorOne"
+                android:fontFamily="@font/game_font_regular"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/noLimitPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/gameButton"
+            app:layout_constraintStart_toEndOf="@id/playButton"
+            app:layout_constraintEnd_toStartOf="@id/jokerPlay"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/noLimit"
+                android:textSize="40sp"
+                android:textColor="@color/txtColorOne"
+                android:fontFamily="@font/game_font_regular"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/jokerPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/gameButton"
+            app:layout_constraintStart_toEndOf="@id/noLimitPlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/joker"
+                android:textSize="40sp"
+                android:textColor="@color/txtColorOne"
+                android:fontFamily="@font/game_font_regular"/>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

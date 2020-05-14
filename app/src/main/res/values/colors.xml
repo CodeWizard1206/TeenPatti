@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#0090D3</color>
+    <color name="btnColorOne" >#47A0FF</color>
+    <color name="txtColorOne" >#FFFFFF</color>
+    <color name="txtColorTwo" >#AFAFAF</color>
+    <color name="txtColorThree" >#83D64F</color>
+    <color name="darkCard" >#EB201F1C</color>
+    <color name="cardBg">#CC4423</color>
+    <color name="gameButton">#FFEA00</color>
+</resources>

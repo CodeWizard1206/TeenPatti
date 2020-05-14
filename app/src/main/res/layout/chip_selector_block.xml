@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/chipCard"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:backgroundTint="@color/cardBg">
+
+        <RelativeLayout
+            android:id="@+id/cardContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/chip_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chips_img"/>
+
+            <TextView
+                android:id="@+id/chipCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/game_font_regular"
+                android:textSize="55sp"
+                android:layout_above="@id/amountContainer"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/txtColorThree"/>
+
+            <RelativeLayout
+                android:id="@+id/amountContainer"
+                android:layout_alignBaseline="@id/chip_img"
+                android:layout_alignBottom="@id/chip_img"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/rupeeLogo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/rupee_logo"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/payeeAmount"
+                    android:layout_toEndOf="@id/rupeeLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/darkCard"
+                    android:fontFamily="@font/game_font_regular"
+                    android:textSize="22sp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

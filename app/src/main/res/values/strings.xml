@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Teen Patti</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="fb_login">Login with Facebook</string>
+    <string name="gplay_login">Login with Google</string>
+    <string name="guest">Play as Guest</string>
+    <string name="orMsg">OR USE</string>
+    <string name="dialogHint">Enter Your Name</string>
+    <string name="done">DONE</string>
+    <string name="cancel">CANCEL</string>
+    <string name="logout">Log Out</string>
+    <string name="admin">Admin</string>
+    <string name="buy">Buy Chips</string>
+    <string name="back">Back</string>
+    <string name="teenPatti">3 Patti</string>
+    <string name="noLimit">No Limit</string>
+    <string name="joker">Joker</string>
+    <string name="payMsg">select one of the above listed payment option to continue</string>
+</resources>

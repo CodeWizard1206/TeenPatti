@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/userNameDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        android:backgroundTint="@color/darkCard"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:id="@+id/parentDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/userNameInput"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="4dp"
+                android:hint="@string/dialogHint"
+                android:textColorHint="@color/txtColorTwo"
+                android:textColor="@color/txtColorOne"
+                android:fontFamily="@font/game_font_regular"
+                android:textSize="20sp"
+                android:textAlignment="center"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/acceptNameButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_below="@+id/userNameInput"
+                android:layout_alignEnd="@id/userNameInput"
+                android:text="@string/done"
+                android:textSize="17sp"
+                android:textColor="@color/btnColorOne"
+                app:elevation="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="15dp"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_below="@+id/userNameInput"
+                android:layout_toStartOf="@id/acceptNameButton"
+                android:text="@string/cancel"
+                android:textSize="17sp"
+                android:textColor="@color/btnColorOne"
+                app:elevation="0dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

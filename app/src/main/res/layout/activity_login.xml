@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/main_background"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="95dp"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        tools:ignore="UselessParent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginBtn"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="@string/guest"
+            android:fontFamily="@font/game_font_regular"
+            android:textColor="@color/txtColorOne"
+            android:background="@drawable/button_background"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginEnd="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fbLoginBtn"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fb_login"
+            android:fontFamily="@font/game_font_regular"
+            android:textColor="@color/txtColorOne"
+            android:background="@drawable/fb_login_background"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:paddingStart="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:paddingEnd="20dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/gPlayLoginBtn"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/gplay_login"
+            android:fontFamily="@font/game_font_regular"
+            android:textColor="@color/txtColorOne"
+            android:background="@drawable/gplay_login_background"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"/>
+    </LinearLayout>
+</RelativeLayout>
