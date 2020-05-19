@@ -1,55 +1,76 @@
 package com.pacss.teenPatti.dataHandler;
 
 public class UserHandler {
-    private String userName;
-    private String userID;
-    private int chipAmount;
-    private boolean isGuest =  false;
-    private boolean isAdmin = false;
-    private boolean isPlayer = false;
-    public final static int Admin = 0;
+    private String UserName;
+    private int TotalTokens;
+    private String UserType;
+    private int TotalGamesPlayed;
+    private int TotalLosses;
+    private int TotalWins;
 
     private static UserHandler Object = new UserHandler();
 
-    public UserHandler() {}
+    private UserHandler() {
+    }
 
-    public static UserHandler getUserHandlerReference() {
+    public static UserHandler UserHandlerReference() {
         return Object;
     }
 
-    public void setUser(final String userName, final String userID, final String userType) {
-        this.userName = userName;
-        this.userID = userID;
-        if (userType.equals("Guest")) {
-            isGuest = true;
-        } else if (userType.equals("Admin")) {
-            isAdmin = true;
-        } else {
-            isPlayer = true;
-        }
-    }
-
-    public int getUserType() {
-        if (isAdmin) {
-            return Admin;
-        } else {
-            return 1;
-        }
-    }
-
-    public void setChipAmount(int chipAmount) {
-        this.chipAmount = chipAmount;
+    public void setUser(String userName, int totalTokens, String userType, int totalGamesPlayed, int totalLosses, int totalWins) {
+        UserName = userName;
+        TotalTokens = totalTokens;
+        UserType = userType;
+        TotalGamesPlayed = totalGamesPlayed;
+        TotalLosses = totalLosses;
+        TotalWins = totalWins;
     }
 
     public String getUserName() {
-        return userName;
+        return UserName;
     }
 
-    public String getUserID() {
-        return userID;
+    public void setUserName(String userName) {
+        UserName = userName;
     }
 
-    public int getChipAmount() {
-        return chipAmount;
+    public int getTotalTokens() {
+        return TotalTokens;
+    }
+
+    public void setTotalTokens(int totalTokens) {
+        TotalTokens = totalTokens;
+    }
+
+    public String getUserType() {
+        return UserType;
+    }
+
+    public void setUserType(String userType) {
+        UserType = userType;
+    }
+
+    public int getTotalGamesPlayed() {
+        return TotalGamesPlayed;
+    }
+
+    public void setTotalGamesPlayed(int totalGamesPlayed) {
+        TotalGamesPlayed = totalGamesPlayed;
+    }
+
+    public int getTotalLosses() {
+        return TotalLosses;
+    }
+
+    public void setTotalLosses(int totalLosses) {
+        TotalLosses = totalLosses;
+    }
+
+    public int getTotalWins() {
+        return TotalWins;
+    }
+
+    public void setTotalWins(int totalWins) {
+        TotalWins = totalWins;
     }
 }

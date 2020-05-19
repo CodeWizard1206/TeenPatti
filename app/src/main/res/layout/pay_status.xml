@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        app:cardCornerRadius="10dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/pay_card_bk"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/statusIcon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/statusMsg"
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/statusIcon"
+                android:textSize="26sp"
+                android:textColor="@color/txtColorOne"
+                android:fontFamily="@font/game_font_regular"/>
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

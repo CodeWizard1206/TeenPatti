@@ -1,5 +1,4 @@
 <resources>
-
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.Bridge">
         <!-- Customize your theme here. -->
@@ -17,8 +16,17 @@
         <item name="android:fitsSystemWindows">true</item>
     </style>
 
+    <style name="Theme.Transparent" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
 </resources>

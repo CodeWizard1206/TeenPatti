@@ -222,32 +222,11 @@
         android:layout_centerInParent="true" >
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/playButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/gameButton"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/noLimitPlay"
-            app:cardCornerRadius="5dp"
-            app:layout_constraintBottom_toBottomOf="parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="@string/teenPatti"
-                android:textSize="40sp"
-                android:textColor="@color/txtColorOne"
-                android:fontFamily="@font/game_font_regular"/>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
             android:id="@+id/noLimitPlay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/gameButton"
-            app:layout_constraintStart_toEndOf="@id/playButton"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/jokerPlay"
             app:layout_constraintTop_toTopOf="parent"
             app:cardCornerRadius="5dp"

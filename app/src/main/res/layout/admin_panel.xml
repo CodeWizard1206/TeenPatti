@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginVertical="40dp"
+        android:layout_centerInParent="true">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/pay_card_bk"
+            android:scaleType="fitXY"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/upperBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/closeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/close"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="14dp"
+                android:textColor="@color/txtColorOne"
+                android:fontFamily="@font/game_font_regular"
+                android:backgroundTint="@color/red"
+                app:strokeColor="@color/txtColorOne"
+                app:strokeWidth="3dp"
+                app:cornerRadius="10dp"
+                android:textSize="25sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:elevation="0dp"
+                tools:ignore="RelativeOverlap" />
+
+            <com.google.android.material.button.MaterialButton
+                android:visibility="gone"
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/back"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="14dp"
+                android:textColor="@color/txtColorOne"
+                android:fontFamily="@font/game_font_regular"
+                android:backgroundTint="@color/yellow"
+                app:strokeColor="@color/txtColorOne"
+                app:strokeWidth="3dp"
+                app:cornerRadius="10dp"
+                android:textSize="25sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:elevation="0dp"
+                tools:ignore="RelativeOverlap" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/adminPanel"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/txtColorOne"
+                android:fontFamily="@font/game_font_regular"
+                android:textSize="36sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/gameControl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/newGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/viewGame"
+                android:text="@string/newGame"
+                app:backgroundTint="@color/btnColorTwo"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="3dp"
+                app:cornerRadius="8dp"
+                android:textSize="28sp"
+                android:fontFamily="@font/game_font_regular"
+                android:textColor="@color/txtColorOne"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/viewGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/newGame"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/viewGame"
+                app:backgroundTint="@color/btnColorTwo"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="3dp"
+                app:cornerRadius="8dp"
+                android:textSize="28sp"
+                android:fontFamily="@font/game_font_regular"
+                android:textColor="@color/txtColorOne"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="gone"
+            android:id="@+id/newGamePanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:visibility="gone"
+                android:id="@+id/gameIdText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/game_id_text"
+                android:padding="8dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/gameSelector"
+                android:focusableInTouchMode="true"
+                android:textSize="26sp"
+                android:fontFamily="@font/game_font_regular"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:visibility="gone"
+                android:id="@+id/copyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:layout_constraintStart_toEndOf="@id/gameIdText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/gameIdText"
+                app:layout_constraintBottom_toBottomOf="@id/gameIdText"
+                android:backgroundTint="@color/btnColorTwo" >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/copy_content"
+                    android:scaleType="fitXY"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/gameSelector"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/getIdButton"
+                android:hint="@string/selectorHint"
+                app:boxCornerRadiusBottomStart="5dp"
+                app:boxCornerRadiusBottomEnd="5dp"
+                android:backgroundTint="@color/btnColorTwo"
+                app:boxCornerRadiusTopEnd="5dp"
+                app:boxCornerRadiusTopStart="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/gameIdText">
+
+                <AutoCompleteTextView
+                    android:id="@+id/gameList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/btnColorTwo"
+                    android:textColor="@color/txtColorOne"
+                    android:fontFamily="@font/game_font_regular"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:textSize="20sp"
+                    tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/getIdButton"
+                app:cornerRadius="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="6dp"
+                app:layout_constraintStart_toEndOf="@id/gameSelector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gameIdText"
+                android:text="@string/getGame"
+                android:textSize="30sp"
+                android:fontFamily="@font/game_font_regular"
+                android:textColor="@color/txtColorOne"
+                android:backgroundTint="@color/btnColorTwo"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

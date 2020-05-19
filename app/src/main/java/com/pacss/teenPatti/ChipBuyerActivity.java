@@ -13,7 +13,7 @@ import com.pacss.teenPatti.dataHandler.UserHandler;
 
 public class ChipBuyerActivity extends AppCompatActivity {
 
-    private static UserHandler User = UserHandler.getUserHandlerReference();
+    private static UserHandler User = UserHandler.UserHandlerReference();
     private RecyclerView chipList;
     private chipBuyerAdapter chipAdapter;
     private String[] chipAmount;
@@ -28,6 +28,7 @@ public class ChipBuyerActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        this.getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.activity_chip_buyer);
 
         chipList = findViewById(R.id.chipList);
@@ -46,7 +47,7 @@ public class ChipBuyerActivity extends AppCompatActivity {
         }
 
         userName.setText(User.getUserName());
-        chipCount.setText(Integer.toString(User.getChipAmount()));
+        chipCount.setText(Integer.toString(User.getTotalTokens()));
 
         backCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +60,7 @@ public class ChipBuyerActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        chipCount.setText(Integer.toString(User.getChipAmount()));
+        chipCount.setText(Integer.toString(User.getTotalTokens()));
         this.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
     }
 }

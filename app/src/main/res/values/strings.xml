@@ -18,5 +18,12 @@
     <string name="teenPatti">3 Patti</string>
     <string name="noLimit">No Limit</string>
     <string name="joker">Joker</string>
-    <string name="payMsg">select one of the above listed payment option to continue</string>
+    <string name="payMsg">*make sure you installed any UPI based payment application on your device</string>
+    <string name="close">X</string>
+    <string name="adminPanel">Admin Panel</string>
+    <string name="newGame">New Game</string>
+    <string name="viewGame">View Game</string>
+    <string name="payButton">CONFIRM PAYMENT</string>
+    <string name="selectorHint">Select Game</string>
+    <string name="getGame">Generate Game ID</string>
 </resources>

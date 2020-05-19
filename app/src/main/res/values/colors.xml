@@ -9,5 +9,8 @@
     <color name="txtColorThree" >#83D64F</color>
     <color name="darkCard" >#EB201F1C</color>
     <color name="cardBg">#CC4423</color>
+    <color name="btnColorTwo">#FF8120</color>
     <color name="gameButton">#FFEA00</color>
+    <color name="red">#A60000</color>
+    <color name="yellow">#D1C000</color>
 </resources>
