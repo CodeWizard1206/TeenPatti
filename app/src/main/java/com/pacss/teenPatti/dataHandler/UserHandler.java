@@ -2,11 +2,8 @@ package com.pacss.teenPatti.dataHandler;
 
 public class UserHandler {
     private String UserName;
-    private int TotalTokens;
+    private long TotalTokens;
     private String UserType;
-    private int TotalGamesPlayed;
-    private int TotalLosses;
-    private int TotalWins;
 
     private static UserHandler Object = new UserHandler();
 
@@ -17,13 +14,10 @@ public class UserHandler {
         return Object;
     }
 
-    public void setUser(String userName, int totalTokens, String userType, int totalGamesPlayed, int totalLosses, int totalWins) {
+    public void setUser(String userName, long totalTokens, String userType) {
         UserName = userName;
         TotalTokens = totalTokens;
         UserType = userType;
-        TotalGamesPlayed = totalGamesPlayed;
-        TotalLosses = totalLosses;
-        TotalWins = totalWins;
     }
 
     public String getUserName() {
@@ -34,11 +28,11 @@ public class UserHandler {
         UserName = userName;
     }
 
-    public int getTotalTokens() {
+    public long getTotalTokens() {
         return TotalTokens;
     }
 
-    public void setTotalTokens(int totalTokens) {
+    public void setTotalTokens(long totalTokens) {
         TotalTokens = totalTokens;
     }
 
@@ -48,29 +42,5 @@ public class UserHandler {
 
     public void setUserType(String userType) {
         UserType = userType;
-    }
-
-    public int getTotalGamesPlayed() {
-        return TotalGamesPlayed;
-    }
-
-    public void setTotalGamesPlayed(int totalGamesPlayed) {
-        TotalGamesPlayed = totalGamesPlayed;
-    }
-
-    public int getTotalLosses() {
-        return TotalLosses;
-    }
-
-    public void setTotalLosses(int totalLosses) {
-        TotalLosses = totalLosses;
-    }
-
-    public int getTotalWins() {
-        return TotalWins;
-    }
-
-    public void setTotalWins(int totalWins) {
-        TotalWins = totalWins;
     }
 }

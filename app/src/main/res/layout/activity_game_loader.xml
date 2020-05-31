@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/card_background"
+    tools:context=".GameLoaderActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loading"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/loadingProgress"
+        android:fontFamily="@font/game_font_regular"
+        android:textColor="@color/txtColorOne"
+        android:textSize="24sp"/>
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/loadingProgress"
+        android:layout_width="500dp"
+        android:layout_height="20dp"
+        android:minHeight="25dip"
+        android:maxHeight="25dip"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:indeterminate="true"
+        android:layout_marginBottom="8dp"/>
+
+</RelativeLayout>

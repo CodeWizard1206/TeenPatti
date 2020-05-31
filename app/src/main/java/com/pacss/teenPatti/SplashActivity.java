@@ -9,7 +9,9 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 import com.pacss.teenPatti.dataHandler.FirebaseManager;
+import com.pacss.teenPatti.gameHandler.gamePlayManager;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -39,16 +41,23 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if  (sharedPreferences.getBoolean("LOG_STATUS", false)) {
+                if (firebaseManager.isConnectionAvailable(SplashActivity.this)) {
+                    if (sharedPreferences.getBoolean("LOG_STATUS", false)) {
+                        gamePlayManager Manager = gamePlayManager.getInstance();
+                        Manager.resetInstance();
                         firebaseManager.getGuestUser(sharedPreferences.getString("USER_ID", "0000"));
                         startActivity(new Intent(SplashActivity.this, HomeActivity.class));
                         finish();
+                    } else {
+                        startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                        finish();
+                    }
                 } else {
-                    startActivity(new Intent(SplashActivity.this, LoginActivity.class));
-                    finish();
+                    finishAffinity();
+                    Toast.makeText(SplashActivity.this, "Network Problem Occurred, Please Resolve All Network Issues & Try Again!!!", Toast.LENGTH_LONG).show();
                 }
             }
-        }, 2500);
+        }, 5000);
     }
 
     @Override

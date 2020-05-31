@@ -15,7 +15,7 @@ public class chipBuyerAdapter extends RecyclerView.Adapter<chipBuyerAdapter.list
     private String[] rupeeAmount;
     private Context context;
 
-    public chipBuyerAdapter(String[] chipAmount, String[] rupeeAmount, Context context) {
+    chipBuyerAdapter(String[] chipAmount, String[] rupeeAmount, Context context) {
         this.chipAmount = chipAmount;
         this.rupeeAmount = rupeeAmount;
         this.context = context;
@@ -49,12 +49,12 @@ public class chipBuyerAdapter extends RecyclerView.Adapter<chipBuyerAdapter.list
         return chipAmount.length;
     }
 
-    public class listViewHolder extends RecyclerView.ViewHolder {
+    class listViewHolder extends RecyclerView.ViewHolder {
         TextView Chips;
         TextView Money;
         CardView chipCard;
 
-        public listViewHolder(View itemView) {
+        listViewHolder(View itemView) {
             super(itemView);
             Chips = itemView.findViewById(R.id.chipCount);
             Money = itemView.findViewById(R.id.payeeAmount);

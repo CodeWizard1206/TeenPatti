@@ -232,14 +232,27 @@
             app:cardCornerRadius="5dp"
             app:layout_constraintBottom_toBottomOf="parent">
 
-            <TextView
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="@string/noLimit"
-                android:textSize="40sp"
-                android:textColor="@color/txtColorOne"
-                android:fontFamily="@font/game_font_regular"/>
+                android:layout_margin="10dp" >
+
+                <TextView
+                    android:id="@+id/mainHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/noLimit"
+                    android:textSize="40sp"
+                    android:textColor="@color/txtColorOne"
+                    android:fontFamily="@font/game_font_regular"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mainHead"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/noLimitEntry"
+                    android:fontFamily="@font/game_font_regular"/>
+            </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -253,14 +266,28 @@
             app:cardCornerRadius="5dp"
             app:layout_constraintBottom_toBottomOf="parent">
 
-            <TextView
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="@string/joker"
-                android:textSize="40sp"
-                android:textColor="@color/txtColorOne"
-                android:fontFamily="@font/game_font_regular"/>
+                android:layout_margin="10dp" >
+
+                <TextView
+                    android:id="@+id/mainHead2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/joker"
+                    android:textSize="40sp"
+                    android:textColor="@color/txtColorOne"
+                    android:fontFamily="@font/game_font_regular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mainHead2"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/jokerEntry"
+                    android:fontFamily="@font/game_font_regular"/>
+            </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>

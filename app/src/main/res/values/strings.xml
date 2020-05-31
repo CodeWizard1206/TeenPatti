@@ -26,4 +26,26 @@
     <string name="payButton">CONFIRM PAYMENT</string>
     <string name="selectorHint">Select Game</string>
     <string name="getGame">Generate Game ID</string>
+    <string name="see">SEE</string>
+    <string name="pack">PACK</string>
+    <string name="add">+</string>
+    <string name="minus">-</string>
+    <string name="chal">BLIND</string>
+    <string name="loading">Loading.....</string>
+    <string name="noLimitEntry">Entry : 200 Coins</string>
+    <string name="jokerEntry">Entry : 500 Coins</string>
+    <string name="accept">Accept</string>
+    <string name="deny">Decline</string>
+    <string name="sideShowReq">Side Show\nRequested</string>
+    <string name="viewCard">View\nCards</string>
+    <string name="show">SHOW</string>
+    <string name="viewGames">View Games</string>
+    <string name="lost">You Lost</string>
+    <string name="pot">Pot Amount : </string>
+    <string name="bot">Bot Amount</string>
+    <string name="gameStat">Game Status :</string>
+    <string name="noResponse">No Data Found!!!</string>
+    <string name="info">Game Info</string>
+    <string name="winner">Winner Details :</string>
+    <string name="coins">Coins : </string>
 </resources>

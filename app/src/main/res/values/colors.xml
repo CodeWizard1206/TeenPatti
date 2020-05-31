@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimary">#7B1FFF</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#0090D3</color>
     <color name="btnColorOne" >#47A0FF</color>
@@ -13,4 +13,8 @@
     <color name="gameButton">#FFEA00</color>
     <color name="red">#A60000</color>
     <color name="yellow">#D1C000</color>
+    <color name="controlPanel">#781C00</color>
+    <color name="green">#49BA00</color>
+    <color name="dark">#000000</color>
+    <color name="progress">#FF0099</color>
 </resources>

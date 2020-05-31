@@ -9,19 +9,18 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import androidx.appcompat.app.ActionBar;
-
 import java.util.Objects;
 
-public class AppDialogHandler {
+class AppDialogHandler {
     private Dialog customDialog;
-    public static int WRAP_CONTENT = 0;
-    public static int MATCH_PARENT = 1;
+    static int WRAP_CONTENT = 0;
+    static int MATCH_PARENT = 1;
 
-    public AppDialogHandler(Context context) {
+    AppDialogHandler(Context context) {
         this.customDialog = new Dialog(context);
     }
 
-    public void setCustomDialog(int Layout, int layoutType) {
+    void setCustomDialog(int Layout, int layoutType) {
         customDialog.setContentView(Layout);
         Objects.requireNonNull(customDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         Window window = customDialog.getWindow();
@@ -37,15 +36,15 @@ public class AppDialogHandler {
         }
     }
 
-    public void showDialog() {
+    void showDialog() {
         customDialog.show();
     }
 
-    public Dialog getCustomDialog() {
+    Dialog getCustomDialog() {
         return customDialog;
     }
 
-    public void clear() {
+    void clear() {
         customDialog.dismiss();
     }
 }
